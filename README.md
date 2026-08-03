@@ -1,202 +1,210 @@
-# 🛍️ Product Management System
+# 🛒 Product Management System
 
-A simple **Console-Based Product Management System** built with **C#**. This project demonstrates the fundamentals of CRUD (Create, Read, Update, Delete) operations using collections in .NET.
+A simple **Console-Based Product Management System** built with **C#** that allows users to manage product information through a menu-driven interface.
 
-It is designed as a beginner-friendly project to practice C# programming concepts such as methods, loops, conditional statements, lists, and user interaction through the console.
+The application demonstrates the fundamentals of **Object-Oriented Programming (OOP)**, collections, and CRUD operations while providing a clean and interactive console experience.
 
 ---
 
-## 📌 Features
+# 📸 Graphical Representation
+
+<p align="center">
+    <img src="assets/product-management-overview.png" alt="Product Management System Overview" width="100%">
+</p>
+
+---
+
+# ✨ Features
 
 - ➕ Add new products
 - 📋 Display all products
 - ✏️ Update existing products
 - ❌ Remove products
-- 🔄 Interactive menu-driven console interface
+- 🔄 Menu-driven console interface
+- 💾 Store product information using C# Lists
+- 🖥️ Simple and beginner-friendly design
 
 ---
 
-## 🛠️ Built With
-
-- **C#**
-- **.NET Console Application**
-- **System.Collections.Generic (List<T>)**
-
----
-
-## 📂 Project Structure
+# 🖼️ Application Workflow
 
 ```
-Product-Management-System/
+                Start
+                  │
+                  ▼
+          Display Main Menu
+                  │
+                  ▼
+      ┌─────────────────────────┐
+      │ Choose an Operation     │
+      └─────────────────────────┘
+                  │
+      ┌───────────┼─────────────┐
+      ▼           ▼             ▼
+ Add Product  Display Products  Update Product
+      │           │             │
+      └───────────┼─────────────┘
+                  ▼
+          Remove Product
+                  │
+                  ▼
+          Return to Menu
+                  │
+                  ▼
+                 Exit
+```
+
+---
+
+# 📂 Project Structure
+
+```
+ProductManagementSystem
 │
-├── Program.cs          # Main application logic
-├── README.md           # Project documentation
-└── Product-Management-System.sln
+├── Product.cs
+├── README.md
+└── assets
+      └── product-management-overview.png
 ```
 
 ---
 
-## 🚀 Getting Started
+# 🛠️ Technologies Used
 
-### Prerequisites
-
-- .NET SDK (6.0 or later)
-- Visual Studio 2022 / Visual Studio Code
-
-### Installation
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/YourUsername/Product-Management-System.git
-```
-
-2. Navigate to the project directory
-
-```bash
-cd Product-Management-System
-```
-
-3. Run the application
-
-```bash
-dotnet run
-```
+- C#
+- .NET
+- Console Application
+- Lists (Collections)
+- CRUD Operations
 
 ---
 
-## 💻 Application Menu
+# 📚 Data Structure
 
-```
-Welcome to the Product Management System
+The application stores product information using three synchronized lists.
 
-1. Add Product
-2. Display Products
-3. Update Product
-4. Remove Product
-5. Exit
-```
+| List | Purpose |
+|------|----------|
+| productNames | Stores product names |
+| productPrices | Stores product prices |
+| productStocks | Stores available stock |
+
+Each product is identified using the same index across all three lists.
+
+Example:
+
+| Name | Price | Stock |
+|------|------:|------:|
+| Laptop | 1200 | 8 |
+| Mouse | 20 | 35 |
+| Keyboard | 45 | 15 |
 
 ---
 
-## 📖 How It Works
+# ⚙️ Functionalities
 
-The application stores product information using three separate `List<T>` collections:
+## ➕ Add Product
 
-- Product Names
-- Product Prices
-- Product Stocks
+Allows the user to enter:
 
-Each product is identified by its index across the three lists.
-
-The application supports the following operations:
-
-### Add Product
-Creates a new product by entering:
 - Product Name
 - Product Price
 - Product Stock
 
-### Display Products
-Shows all stored products with their details.
+The product is then added to the inventory.
 
-### Update Product
-Searches for a product by name and updates:
+---
+
+## 📋 Display Products
+
+Displays every product in the inventory including:
+
 - Name
 - Price
 - Stock
 
-### Remove Product
-Deletes a product by its name.
+---
+
+## ✏️ Update Product
+
+Searches for a product by name and updates:
+
+- Product Name
+- Price
+- Stock
 
 ---
 
-## 🧠 Concepts Practiced
+## ❌ Remove Product
 
-- Classes
-- Static Methods
-- Lists (`List<T>`)
-- Loops
-- Conditional Statements
-- CRUD Operations
-- User Input & Output
-- String Comparison
-- Console Applications
+Removes a product from the inventory by entering its name.
 
 ---
 
-## 🔮 Future Improvements
+# 🚀 How to Run
 
-- Replace multiple lists with a `Product` class.
-- Store products in a single `List<Product>`.
-- Add input validation.
-- Prevent duplicate product names.
-- Search products by name.
-- Sort products by price or name.
-- Save and load data from a file or database.
-- Exception handling using `try-catch`.
-- Unit testing.
+1. Clone the repository
 
----
-
-## 📷 Sample Output
-
-```
-Welcome to the Product Management System
-
-1. Add Product
-2. Display Products
-3. Update Product
-4. Remove Product
-5. Exit
-
-Enter your choice: 1
-
-Enter product name: Laptop
-Enter product price: 1200
-Enter product stock: 8
-
-Product added successfully.
+```bash
+git clone https://github.com/YOUR_USERNAME/Product-Management-System.git
 ```
 
+2. Open the project in Visual Studio.
+
+3. Build the solution.
+
+4. Run the application.
+
+5. Use the menu to manage products.
+
 ---
 
-## 📚 Learning Objectives
+# 📸 Console Preview
 
-This project was created to practice:
+The graphical representation above demonstrates:
+
+- Main Menu
+- Add Product
+- Display Products
+- Update Product
+- Remove Product
+- Exit Flow
+
+---
+
+# 💡 Future Improvements
+
+- Store data in SQL Server
+- Use Entity Framework Core
+- Add Product Categories
+- Product Search by ID
+- Product Validation
+- File Storage
+- Login System
+- Windows Forms or WPF Interface
+- ASP.NET MVC Web Version
+
+---
+
+# 🎯 Learning Objectives
+
+This project helped reinforce:
 
 - C# Fundamentals
-- Object-Oriented Programming Basics
-- Data Management with Lists
-- Building Interactive Console Applications
-- Git & GitHub Project Management
+- Methods
+- Loops
+- Conditional Statements
+- Lists
+- CRUD Operations
+- Problem Solving
+- Console Application Development
 
 ---
 
-## 🤝 Contributing
+# 👨‍💻 Author
 
-Contributions are welcome!
+**Kero**
 
-If you'd like to improve this project:
+Aspiring .NET Full Stack Developer
 
-1. Fork the repository.
-2. Create a new feature branch.
-3. Commit your changes.
-4. Push to your branch.
-5. Open a Pull Request.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-## 👨‍💻 Author
-
-**Kero Romany**
-
-Aspiring Full Stack .NET Developer
-
-GitHub: https://github.com/kero-romany19
+If you like this project, consider giving it a ⭐ on GitHub.
