@@ -388,4 +388,5 @@ This project helped reinforce:
 **Kero**
 
 Aspiring .NET Full Stack Developer
+If you like this project, consider giving it a ⭐ on GitHub.
 
